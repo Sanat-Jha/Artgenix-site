@@ -1,0 +1,682 @@
+	/* Body styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+/* Navbar styles for desktop devices */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  height: 70px;
+  padding: 0 30px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.navbar-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding-top: 20px;
+    overflow-x: hidden;
+  }
+
+  .logo-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar-title {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+/* Media queries for desktop devices */
+@media screen and (min-width: 769px) {
+  .logo-title-container {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+  }
+
+  .navbar-title {
+    margin: 0 20px;
+  }
+}
+
+/* Search container styles */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+#search input[type="text"] {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  color: #000;
+  font-size: 16px;
+  width: 70%;
+}
+
+#search input[type="text"]::placeholder {
+  color: #888;
+}
+
+#search button {
+  background-color: #fff;
+  border: 2px solid #000;
+  color: #000;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  #search input[type="text"] {
+    width: 50%;
+  }
+}
+
+#search button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Banner styles */
+.banner {
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannersubHeading {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 48px;
+  text-align: center;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Main content styles */
+.container {
+  text-align: center;
+  padding: 50px;
+}
+
+.container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #1E3A8A;
+}
+
+.container p {
+  font-size: 18px;
+  line-color: #1E3A8A;
+}
+
+.designs {
+  background-color: #f5f5f5;
+  padding: 50px;
+  text-align: left;
+}
+
+.designs-dropdown {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.designs-dropdown-title {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex; /* added display flex to center the icon */
+  align-items: center; /* added align items center to center the icon */
+}
+
+.designs-dropdown-title:hover {
+  background-color: #2C2C2C;
+}
+
+.designs-dropdown-title .down-arrow {
+  font-size: 16px;
+  margin-left: 5px; /* added margin left for space between text and icon */
+}
+
+.designs-dropdown-content {
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.designs-dropdown-content.show {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+  display: block;
+}
+
+.designs-dropdown-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Styles for the button on phones */
+@media (max-width: 767px) {
+  .designs-dropdown-title {
+    font-size: 18px;
+    /* Other styles... */
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.design-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #1E3A8A;
+}
+
+@media screen and (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .designs {
+    padding: 20px;
+  }
+
+  .design-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+  }
+
+  .design-card {
+    height: auto;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .card-image {
+    height: 50%;
+  }
+
+  .design-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .card-info h3 {
+    font-size: 17px;
+  }
+
+  .btn-black,
+  .btn {
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+}
+
+.design-card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 5 / 6;
+}
+
+.design-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-black {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #1E3A8A;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  border: 2px solid #1E3A8A;
+}
+
+.btn-black:hover {
+  background-color: #fff;
+  color: #1E3A8A;
+  border: 2px solid #1E3A8A;
+}
+
+.card-image {
+  height: 70%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-info {
+  padding: 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Add the zoom effect on card hover */
+.design-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.pagination-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px; /* Add some margin to separate from the buttons */
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin: 5px; /* Increase margin for separation */
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #333;
+}
+
+.pagination button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination a {
+  font-size: 16px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 5px; /* Increase margin for separation */
+  cursor: pointer;
+}
+
+/* Media query for screens with a maximum width of 600px (adjust as needed) */
+@media (max-width: 600px) {
+  .pagination {
+    flex-direction: column; /* Stack buttons vertically on small screens */
+  }
+
+  .pagination button,
+  .pagination a {
+    width: 100%; /* Make buttons take full width of the container */
+  }
+
+  .pagination-links {
+    margin: 0; /* Remove margin on smaller screens */
+  }
+}
+
+/* Footer styles */
+footer {
+  background-color: black;
+  color: white;
+  padding: 40px 0;
+  font-size: 16px;
+}
+
+footer h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+
+footer p {
+  line-height: 1.5;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a i {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+}
+
+.footer-bottom {
+  background-color: #1a1a1a;
+  color: #999999;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Navbar animations */
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navbar styles for desktop devices */
+.navbar {
+  animation: slideInDown 0.5s ease-in-out;
+}
+
+.navbar-title {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-links a {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.navbar-links a:hover {
+  transform: scale(1.05);
+}
+
+/* Banner animations */
+.banner {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.banner h1,
+.bannersubHeading {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Main content animations */
+.grid-container {
+  animation: slideInUp 1s ease-in-out;
+}
+
+.F-button {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.category-button:hover {
+  transform: scale(1.05);
+}
+.category-buttons {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.category-buttons::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category-buttons::-webkit-scrollbar-track {
+  background-color: #F5F5F5;
+}
+
+.category-buttons::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+.category-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.category-button:focus {
+  outline: none;
+}
+
+.category-button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Footer animations */
+footer {
+  animation: slideInUp 1s ease-in-out;
+}
+
+.social-icons a i {
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a i:hover {
+  background-color: #1E3A8A;
+}
+
+.search-container {
+  animation: fadeIn 1s ease-in-out;
+}
+
+#search button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#search button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.category-buttons {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.pagination-links {
+  animation: slideInUp 1s ease-in-out;
+}
+
+.pagination button:hover {
+  background-color: #333;
+}
+/* Main content styles */
+.container {
+  text-align: center;
+  padding: 50px;
+  position: relative; /* Position relative for absolute positioning of clouds */
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+/* Grid container for cards */
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
